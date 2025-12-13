@@ -8,8 +8,8 @@ Authors: Angela Wu
 ### General Introduction
 Text
 ### Introduction of Columns
-More text
 Below is the table. Follow the template for more rows.
+
 | Column | Description |
 |---|---|
 | 'deaths' | Number of deaths in a game |
