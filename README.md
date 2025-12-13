@@ -13,7 +13,6 @@ Below is the table. Follow the template for more rows.
 | Column | Description |
 |---|---|
 | 'deaths' | Number of deaths in a game |
-|  |  |
   
 ## Data Cleaning and Exploratory Data Analysis
 ### Data Cleaning
