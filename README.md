@@ -32,6 +32,12 @@ Bazinga!
 
 ## Hypothesis Testing
 My p-value is so small.
+<iframe
+  src="assets/aurelionsol_hypothesis.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Framing a Prediction Problem
 Will my p-value still be small?
