@@ -22,13 +22,13 @@ More text
 <iframe
   src="assets/champion_pick_univariate.html"
   width="800"
-  height="800"
+  height="600"
   frameborder="0"
 ></iframe>
 <iframe
   src="assets/match_outcome_univariate.html"
   width="800"
-  height="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
@@ -37,13 +37,13 @@ Even more text
 <iframe
   src="assets/champion_bivariate.html"
   width="800"
-  height="800"
+  height="600"
   frameborder="0"
 ></iframe>
 <iframe
   src="assets/winrate_side_bivariate.html"
   width="800"
-  height="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
@@ -58,13 +58,13 @@ Bazinga!
 <iframe
   src="assets/mar_dependent.html"
   width="800"
-  height="800"
+  height="600"
   frameborder="0"
 ></iframe>
 <iframe
   src="assets/mar_independent.html"
   width="800"
-  height="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
@@ -74,7 +74,7 @@ My p-value is so small.
 <iframe
   src="assets/aurelionsol_hypothesis.html"
   width="800"
-  height="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
