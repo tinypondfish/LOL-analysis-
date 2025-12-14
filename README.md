@@ -35,7 +35,7 @@ My p-value is so small.
 <iframe
   src="assets/aurelionsol_hypothesis.html"
   width="800"
-  height="600"
+  height="800"
   frameborder="0"
 ></iframe>
 
