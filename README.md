@@ -19,8 +19,34 @@ Below is the table. Follow the template for more rows.
 Text
 ### Univariate Analysis
 More text
+<iframe
+  src="assets/champion_pick_univariate.html"
+  width="800"
+  height="800"
+  frameborder="0"
+></iframe>
+<iframe
+  src="assets/match_outcome_univariate.html"
+  width="800"
+  height="800"
+  frameborder="0"
+></iframe>
+
 ### Bivariate Analysis
 Even more text
+<iframe
+  src="assets/champion_bivariate.html"
+  width="800"
+  height="800"
+  frameborder="0"
+></iframe>
+<iframe
+  src="assets/winrate_side_bivariate.html"
+  width="800"
+  height="800"
+  frameborder="0"
+></iframe>
+
 ### Interesing Aggregates
 So much text.
 
@@ -29,6 +55,19 @@ So much text.
 Wowzers.
 ### Missingness Dependency
 Bazinga!
+<iframe
+  src="assets/mar_dependent.html"
+  width="800"
+  height="800"
+  frameborder="0"
+></iframe>
+<iframe
+  src="assets/mar_independent.html"
+  width="800"
+  height="800"
+  frameborder="0"
+></iframe>
+
 
 ## Hypothesis Testing
 My p-value is so small.
