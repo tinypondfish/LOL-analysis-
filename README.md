@@ -144,7 +144,13 @@ Below is a histogram that displays the distribution of the test statistics durin
 The hypothesis test concluded a p-value of 0.3791. This is a large p-value that way exceeded the threshold, so we failed to reject the null hypothesis. This result is not surprising, as although Aurelion Sol appears to have a noticeably higher win rate than other champions, his win rate is based on an extremely limited sample size (number of times picked) in the 2022 professional season. Since Aurelion Sol was almost never drafted, not very many games invovled him, which eplains why his observed win rate is highly unstable. A win rate difference as extreme as the observed one occurs frequently just by random chance alone under the null hypothesis. The statistical evidence is insufficient to conclude that picking Aurelion Sol meaningfully increases or decreases a team’s probability of winning.
 
 ## Framing a Prediction Problem
-Will my p-value still be small?
+Continuing on from the analysis that I performed on the previous sections, I wanted to explore the question: Could I incoporate champion picks as a predictive feature among other relavant features in a machine learning model in an attempt to predict the outcome of a match? Since I plan on predicting results column (target variable that contains a 0 or 1 indicating whether a team lost or won a match), my prediction problem would fall under the category of binary classification. My model is primarily based on champion picks and champion combinations, which are decided during the draft phase. 
+
+Since the purpose of the model is to predict the outcome of a game before the game starts and after the draft selection, the model can only utilize information available before the game starts. Thus, I excluded any in game statistics as they would introduce potential data leakage. I will be using `pick1` - `pick5`, `ban1` - `ban5`, `side`, and `league`. 
+
+To evaluate the performance of the classification model, I will be using accuracy (in this case the proportion of matches for which the model correctly predicts the outcome). Since the response variable `result` is exactly balanced, accuracy provides a meaningful insight and serve as an interpretable measure of overall model performance. Additionally, the main goal of the model is to correctly predict match outcomes and not to prioritize one class over the other, making accuracy the natural and appropriate choice. Other metrics such as the F1 score are more advantageous and suitable for scenarios with an imbalance in the target variable or cases where false positives and false negatives should be weighted differently. 
+
+To avoid overfitting to training data, the data will be split into two parts: 80% training data, and 20% test data.
 
 ## Baseline Model
 P-value is small.
