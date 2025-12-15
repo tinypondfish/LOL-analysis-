@@ -160,8 +160,6 @@ After fitting the model, the baseline achieved an accuracy of approximately 53% 
 P-value will always be small.
 
 ## Fairness Analysis
-Clearly state your choice of Group X and Group Y, your evaluation metric, your null and alternative hypotheses, your choice of test statistic and significance level, the resulting 
--value, and your conclusion.
 In this section, I will assess whether my final prediction model performs fairly across different groups. Specifically, I aim to answer the following question: Does the model perform worse for teams playing on the Red side compared to teams playing on the Blue side of the arena? Side assignment is a meaningful grouping in professional League of Legends play, as Blue and Red sides can have structural differences that may influence gameplay and the resulting outcome.
 
 To answer this question, I conducted a permutation test examining the difference in accuracy between the two groups.
