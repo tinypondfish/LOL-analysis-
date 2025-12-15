@@ -150,7 +150,11 @@ To evaluate the performance of the classification model, I will be using accurac
 To avoid overfitting to training data, the data will be split into two parts: 80% training data, and 20% test data.
 
 ## Baseline Model
-P-value is small.
+For my baseline model, I trained a logistic regression classifier to predict whether a team wins or loses a match based solely on pre-game draft information. The features I used in this model includes champion picks (pick1–pick5), team side assignment (Blue or Red), and the league of the match(league).
+
+All seven of these features are nominal categorical. I used one-hot encoding to transform each categorical feature into binary indicator features. No quantitative or ordinal features were included as part of my baseline model, and all of the preprocessing and model fitting steps were implemented within a single sklearn Pipeline.
+
+After fitting the model, the baseline achieved an accuracy of approximately 53% on the test set that the model has never seen before. Though the performance of my model is only slightly better than chance, this result was not unexpected given the limited features I used in the baseline model and the inherent unpredictability of professional League of Legends matches(they are pro for a reason, right?). I would not consider my current baseline model as good or have strong predictive power.
 
 ## Final Model
 P-value will always be small.
