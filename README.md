@@ -5,7 +5,18 @@ Authors: Angela Wu
 
 ## Introduction
 ### General Introduction
-Text
+League of Legends (LoL) is a hugely popular multiplayer online battle arena game developed by Riot Games. With around 100 million players, LoL is one of the most influential and well-known esports games of all time. The data set analyzed in this analysis is developed by Oracle’s Elixir, and focuses on data from 2022 of professional LoL esport matches. The dataset has over 30 columns and 150589 rows that together, provide gameplay statistics on a multitude of matches and offer insight on team behavior, champion selection, and match results.
+
+As a player of MOBA games, it is commonly believed that champion selection strongly influences match outcomes. Certain champions are perceived as stronger, more versatile, or better suited to specific team compositions or competitive regions. However, these “common-sense” beliefs are often anecdotal and not supported by rigorous statistical evidence.
+
+As a player of MOBA games, it is known that choosing different champions will result in different outcomes. Certain champions are seen as “meta” because they are stronger or more versatile, and as a result, will lead to a higher chance of winning. However, more statistical analysis is required to make and prove these “common-sense” conclusions that are often anecdotal at nature. Like mentioned earlier, this project's main objective is to investigate the effect of champion selection on various factors such as match outcome.
+
+The central question of this project is:
+
+> Does champion selection significantly impact match outcomes in professional League of Legends play?
+
+This question is important because in LoL matches, champion selection occurs before gameplay begins, meaning it represents a strategic decision that can shape the entire course of a match. So, by understanding how champion choices correlate with winning, significant insight can be provided on balancing and drafting strategy. For data scientists and LoL players, answering this question will help distinguish genuine patterns from meaningless bias.
+
 ### Introduction of Columns
 This dataset contains an array of columns containing a multitude of game data from various professional League of Legends matches. With over 30 columns of different game data, the following is an introduction of some of the key columns used in this statistical analysis:
 
