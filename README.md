@@ -35,7 +35,7 @@ This dataset contains an array of columns containing a multitude of game data fr
 ### Data Cleaning
 Text
 ### Univariate Analysis
-More text
+I performed univariate analysis on champion pick frequencies in the dataset:
 <iframe
   src="assets/champion_pick_univariate.html"
   width="800"
@@ -48,6 +48,8 @@ More text
   height="600"
   frameborder="0"
 ></iframe>
+The barchart displays the top 10 most picked champions in pro play during the 2022 season. Significant differences in champion pick preference is noticeably present, with the most picked champion picked 3743 times. It is interesting to note that the most preferable champions that are typically picked does not correspond to the champions with the highest win rate. It is also important to note that some champions have been picked significantly less during the season, as seen with Aurelion Sol (picked 5 times). 
+
 
 ### Bivariate Analysis
 Even more text
