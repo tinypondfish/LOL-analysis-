@@ -13,20 +13,26 @@ This dataset contains an array of columns containing a multitude of game data fr
 | 'deaths' | Number of deaths in a game |
 
 - `gameid`: This column represents the unique identifier for each match/game that is played, which lets us distinguish between different matches.
+  
 - `teamid`: This column represents the unique identifier for each team.
+  
 - `league`: This column represents which professional League of Legends competition or region the match was played in.
+  
 - `side`: This column represents which side this team played on for a certain match (rev vs. blue)
+  
 - `result`: This column represents the outcome of a match. Specifically, 1 represents the team won, and 0 represents the team lost.
-- `ban1`: This column represents the 1st character banned by the opposing team in the corresponding League of Legends match.
-- `ban2`: This column represents the 2nd character banned by the opposing team in the corresponding League of Legends match.
-- `ban3`: This column represents the 3rd character banned by the opposing team in the corresponding League of Legends match.
-- `ban4`: This column represents the 4th character banned by the opposing team in the corresponding League of Legends match.
-- `ban5`: This column represents the 5th character banned by the opposing team in the corresponding League of Legends match.
-- `pick1`: This column represents the 1st character picked by the team in the corresponding League of Legends match.
-- `pick2`: This column represents the 2st character picked by the team in the corresponding League of Legends match.
-- `pick3`: This column represents the 3st character picked by the team in the corresponding League of Legends match.
-- `pick4`: This column represents the 4st character picked by the team in the corresponding League of Legends match.
-- `pick5`: This column represents the 5st character picked by the team in the corresponding League of Legends match.
+  
+- `ban1`: This column represents the 1st champion banned by the opposing team in the corresponding League of Legends match.
+- `ban2`: This column represents the 2nd champion banned by the opposing team in the corresponding League of Legends match.
+- `ban3`: This column represents the 3rd champion banned by the opposing team in the corresponding League of Legends match.
+- `ban4`: This column represents the 4th champion banned by the opposing team in the corresponding League of Legends match.
+- `ban5`: This column represents the 5th champion banned by the opposing team in the corresponding League of Legends match.
+
+- `pick1`: This column represents the 1st champion picked by the team in the corresponding League of Legends match.
+- `pick2`: This column represents the 2st champion picked by the team in the corresponding League of Legends match.
+- `pick3`: This column represents the 3st champion picked by the team in the corresponding League of Legends match.
+- `pick4`: This column represents the 4st champion picked by the team in the corresponding League of Legends match.
+- `pick5`: This column represents the 5st champion picked by the team in the corresponding League of Legends match.
   
 ## Data Cleaning and Exploratory Data Analysis
 ### Data Cleaning
