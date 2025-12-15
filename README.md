@@ -82,9 +82,6 @@ I performed bivariate analysis on champion picks (picks 1-5) and the result stat
 ></iframe>
 The graph displays the win rates of the top 10 champions with the highest win rates in the dataet. I choose to focus on this subset to narrow down the focus and highlight whether the most popular draft choices coincides with match success. Though there seem to be a notable difference in winrates between champions, an important thing to note is that some champions, such as Aurelion Sol, only appeared a total of < 10 total times. This makes their observed win rates less reliable due to the limitations of insufficient sample size. Another thing to point out is that many champions still perform within a relative range, suggesting that champion win rate is not the sole factor in determining match success. Futher analysis is necessary to discern other factors that are at play such as team composition. 
 
-### Interesing Aggregates
-So much text.
-
 ## Assessment of Missingness
 ### NMAR Analysis
 Among our columns of interest, bans 1-5 stood out as potential candidates for NMAR(Not Missing At Random) analysis. On the surface, the dataset does not reveal the nature of missingness for bans. There dosen't seem to be any obvious trends or dependencies on other columns. However, with some domain knowledge, one could argue that the missingness of bans 1-5 could be classified as a case of NMAR. At the start of a professional League of Legends game, players can decide to leave a ban slot empty. Rather than reflecting dependency with another column in the dataset (as in the case with MAR), this reflects an intentional decision made by a team. Since the missingness of bans depend on the decision itself, this is a case of NMAR. If an extra column `ban_skipped` was considered during data collection which indicated whether a team left at least one slot empty(indicated by 1) or used all bans(indicated by 0), the ban columns would fall under MAR instead.
