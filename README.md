@@ -50,7 +50,12 @@ This dataset contains an array of columns containing a multitude of game data fr
   
 ## Data Cleaning and Exploratory Data Analysis
 ### Data Cleaning
-Text
+To prepare the dataset for analysis, we first filtered the data to include only **team-level** rows (`position` == "team"), since champion picks, bans, and match outcomes are recorded at the team level in professional League of Legends matches. This aligns with the data-generating process of the draft phase, which occurs once per team per game.
+
+We then selected only the columns needed for the project, including match identifiers, side and league information, champion picks (`pick1` – `pick5`), champion bans (`ban1` – `ban5`), match outcomes, and selected team-level statistics. To enable champion-focused analysis, the dataset was reshaped from a wide format to a long format using a melt operation, producing one row per champion pick. This transformation reflects how champions are selected individually during the draft and simplifies the computation of pick frequency and win rate.
+
+Missing values in the champion pick columns correspond to unused or non-applicable pick slots rather than unknown data. These rows were removed, as they do not represent actual champion selections and would not contribute meaningful information to the analysis. The resulting cleaned dataset contains all variables required for exploratory analysis, hypothesis testing, and predictive modeling. The first few rows of the cleaned dataset are shown below.
+
 ### Univariate Analysis
 I performed univariate analysis on champion pick frequencies in the dataset:
 <iframe
