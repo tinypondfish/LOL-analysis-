@@ -52,11 +52,17 @@ This dataset contains an array of columns containing a multitude of game data fr
 ### Data Cleaning
 To clean and prepare the dataset for further analysis, I first filtered the data to keep only **team-level** rows (`position` == "team"). This was necessary since champion picks, bans, and match outcomes are recorded most conveniently at the team level in the dataset(although you could extract the same information from player level data but this would be more complicated since there are 5 player level rows for each game but only 2 team level rows for each game). Additionally, player level analysis is not super relevant to our analysis and could potentially introduce duplicates as the same information is presented in a different format (duplicates are messy and complicated). I then selected only the other columns that may offer relevant insights to our main objective, including `gameid`, `teamid`, `league`, `side`, `ban1`-`ban5`, and `pick1`-`pick5`.
 
-In order to perform champion-specific analysis, I reshaped the dataset from a wide format to a long format using a melt operation, creating one row per champion pick. This transformation allows me to represent each single champion selected as seperate, individual picks and simplifies the computation I will need to do on pick frequency and win rate.
+In order to perform champion-specific analysis, I reshaped the dataset from a wide format to a long format using a melt operation, creating one row per champion pick. This transformation allows me to represent each single champion selected as seperate, individual picks and simplifies the computation I will need to do on pick frequency and win rate. Later on during my modeling, however, I did not perform the melt operation since the data was more useful without melting for the predictive analysis.
 
 During the analysis, I noticed  missing values in the draft affiliated columns. These rows were removed, as they do not represent actual champion selections and would not contribute meaningful information to the analysis, posing a threat of distorting/clouding the analysis. The resulting cleaned dataset contains all variables required for the exploratory analysis, hypothesis testing, and predictive modeling. The head of the cleaned dataset is shown below:
 
-
+| gameid                | teamid |   result | side    |  league  |      ban1 |          ban2 |             ban3 |           ban4 |       ban5 |      variable |  picked_champion |  
+|:----------------------|:-------|---------:|--------:|---------:|----------:|--------------:|-----------------:|---------------:|:-----------|--------------:|:-----------------|
+| ESPORTSTMNT01_2690210 | Blue   |        0 | Blue    | LCKC     |     Karma |       Caitlyn |           Syndra |         Thresh |       Lulu |         pick1 |         Renekton |
+| ESPORTSTMNT01_2690210 | Blue   |        1 | Red     | LCKC     |   Lee Sin |  Twisted Fate |              Zoe |       Nautilus |       Rell |         pick1 |             Jinx |
+| ESPORTSTMNT01_2690219 | Blue   |        0 | Blue    | LCKC     |      Sona |     Jarvan IV |          Caitlyn |           Lulu |     Lucian |         pick1 |          Lee Sin |
+| ESPORTSTMNT01_2690219 | Blue   |        1 | Red     | LCKC     |   LeBlanc |         Yuumi |     Twisted Fate |          Karma |    Alistar |         pick1 |         Renekton |
+|      8401-8401_game_1 | Blue   |        1 | Blue    | LPL      |  Renekton |       Lee Sin |          Caitlyn |          Jayce |    Camille |         pick1 |             Jinx |
 
 
 ### Univariate Analysis
