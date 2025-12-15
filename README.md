@@ -56,7 +56,7 @@ I performed univariate analysis on champion pick frequencies in the dataset:
 <iframe
   src="assets/champion_pick_univariate.html"
   width="800"
-  height="600"
+  height="height: 100%; border: none;"
   frameborder="0"
 ></iframe>
 
@@ -66,7 +66,7 @@ Another univariate analysis I performed on match outcomes:
 <iframe
   src="assets/match_outcome_univariate.html"
   width="800"
-  height="600"
+  height="height: 100%; border: none;"
   frameborder="0"
 ></iframe>
 
