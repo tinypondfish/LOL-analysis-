@@ -7,8 +7,7 @@ Authors: Angela Wu
 ### General Introduction
 Text
 ### Introduction of Columns
-Below is the table. Follow the template for more rows.
-
+This dataset contains an array of columns containing a multitude of game data from various professional League of Legends matches. With over 30 columns of different game data, the following is an introduction of some of the key columns used in this statistical analysis:
 | Column | Description |
 |---|---|
 | 'deaths' | Number of deaths in a game |
