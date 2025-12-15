@@ -1,6 +1,6 @@
-# LOL-analysis-
-League of Legends Analysis is a comprehensive data science project conducted at UCSD for DC80.
-Blah blah blah.
+# League of Legends Champion Specific Statistical Analysis
+League of Legends Champion Specific Statistical Analysis is a comprehensive data science project conducted at UCSD for DC80.
+
 
 Authors: Angela Wu
 
