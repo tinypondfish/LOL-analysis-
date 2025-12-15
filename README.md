@@ -7,8 +7,6 @@ Authors: Angela Wu
 ### General Introduction
 League of Legends (LoL) is a hugely popular multiplayer online battle arena game developed by Riot Games. With around 100 million players, LoL is one of the most influential and well-known esports games of all time. The data set analyzed in this analysis is developed by Oracle’s Elixir, and focuses on data from 2022 of professional LoL esport matches. The dataset has over 30 columns and 150589 rows that together, provide gameplay statistics on a multitude of matches and offer insight on team behavior, champion selection, and match results.
 
-As a player of MOBA games, it is commonly believed that champion selection strongly influences match outcomes. Certain champions are perceived as stronger, more versatile, or better suited to specific team compositions or competitive regions. However, these “common-sense” beliefs are often anecdotal and not supported by rigorous statistical evidence.
-
 As a player of MOBA games, it is known that choosing different champions will result in different outcomes. Certain champions are seen as “meta” because they are stronger or more versatile, and as a result, will lead to a higher chance of winning. However, more statistical analysis is required to make and prove these “common-sense” conclusions that are often anecdotal at nature. Like mentioned earlier, this project's main objective is to investigate the effect of champion selection on various factors such as match outcome.
 
 The central question of this project is:
@@ -21,21 +19,15 @@ This question is important because in LoL matches, champion selection occurs bef
 This dataset contains an array of columns containing a multitude of game data from various professional League of Legends matches. With over 30 columns of different game data, the following is an introduction of some of the key columns used in this statistical analysis:
 
 - `gameid`: This column represents the unique identifier for each match/game that is played, which lets us distinguish between different matches.
-  
 - `teamid`: This column represents the unique identifier for each team.
-  
 - `league`: This column represents which professional League of Legends competition or region the match was played in.
-  
-- `side`: This column represents which side this team played on for a certain match (rev vs. blue)
-  
+- `side`: This column represents which side this team played on for a certain match (rev vs. blue).
 - `result`: This column represents the outcome of a match. Specifically, 1 represents the team won, and 0 represents the team lost.
-  
 - `ban1`: This column represents the 1st champion banned by the opposing team in the corresponding League of Legends match.
 - `ban2`: This column represents the 2nd champion banned by the opposing team in the corresponding League of Legends match.
 - `ban3`: This column represents the 3rd champion banned by the opposing team in the corresponding League of Legends match.
 - `ban4`: This column represents the 4th champion banned by the opposing team in the corresponding League of Legends match.
 - `ban5`: This column represents the 5th champion banned by the opposing team in the corresponding League of Legends match.
-
 - `pick1`: This column represents the 1st champion picked by the team in the corresponding League of Legends match.
 - `pick2`: This column represents the 2st champion picked by the team in the corresponding League of Legends match.
 - `pick3`: This column represents the 3st champion picked by the team in the corresponding League of Legends match.
