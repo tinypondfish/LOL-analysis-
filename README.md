@@ -47,16 +47,18 @@ I performed univariate analysis on champion pick frequencies in the dataset:
 ></iframe>
 The barchart displays the top 10 most picked champions in pro play during the 2022 season. Significant differences in champion pick preference is noticeably present, with the most picked champion picked 3743 times. It is interesting to note that the most preferable champions that are typically picked does not correspond to the champions with the highest win rate. It is also important to note that some champions have been picked significantly less during the season, as seen with Aurelion Sol (picked 5 times). 
 
+Another univariate analysis I performed on match outcomes:
 <iframe
   src="assets/match_outcome_univariate.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+This barchart displays the distribution of match outcomes in the dataset, where a value of 1 represents a win and 0 represents a loss. The distribution is exactly balanced, with wins and losses occurring at exactly equal frequencies. This is an expected result, as each game results in exactly one winning team and one losing team. This distribution provides an important foundation/baseline for the analysis since the target variable is not heavily imbalanced. Standard classification metrics such as accuracy are appropriate for evaluating predictive models in later steps.
 
 
 ### Bivariate Analysis
-Even more text
+
 <iframe
   src="assets/champion_bivariate.html"
   width="800"
