@@ -96,7 +96,7 @@ First, I tested whether the missingness of `pick1` depends on `position`.
 
 **Null Hypothesis**: The proportion of missing values in pick1 is the same for team level rows and player level rows.
 
-**Alternative Hypothesis**: The proportion of missing values in pick1 is not the same for team level rows and player level rows.
+**Alternative Hypothesis**: The proportion of missing values in pick1 is NOT the same for team level rows and player level rows.
 
 After performing the permutation test and computing the observed statistic (by computing the absolute difference in missingness rates of pick1 between rows where `position` == `team` and rows where `position` != `team`), I found that the p-value was 0 and the observed statistic was 0.9637656672401083. The plot below displays the empirical distribution of the TVDs. 
 
@@ -112,7 +112,7 @@ Second, I tested whether the missingness of `pick1` depends on match outcome, `r
 
 **Null Hypothesis**: The distribution of match outcomes is the same when pick1 is missing and when it is not missing.
 
-**Alternative Hypothesis**: The distribution of match outcomes is not the same when pick1 is missing and when it is not missing.
+**Alternative Hypothesis**: The distribution of match outcomes is NOT the same when pick1 is missing and when it is not missing.
 
 After performing the permutation test, the resulting p-value was 1 and the observed statistic was 0.0. The plot below displays the empirical distribution of the TVDs. 
 <iframe
@@ -124,13 +124,24 @@ After performing the permutation test, the resulting p-value was 1 and the obser
 Since the p-value is greater than the threshold of 0.5, I failed to reject the null hypothesis. Therefore, the missingness of `pick1` does not depend on `result`. 
 
 ## Hypothesis Testing
-My p-value is so small.
+For the hypothesis test, I wanted to explore whether picking the champion Aurelion Sol during draft is associated with a significantly different win rate as opposed to picking any other champions. It is important to once again note that though Aurelion Sol has the highest win rate in the entire season, he is a champion that has been picked extremely infrequently. This raises the question of whether his apparent advantage in match outcome reflects an actual effect or could just be attributed to the random noise/variation that is often present in small sample sizes. 
+
+**Null Hypothesis**: The probability of winning a match is the same for teams that pick Aurelion Sol and teams that did not pick Aurelion Sol. 
+
+**Alternative Hypothesis**: The probability of winning a match is NOT the same for teams that pick Aurelion Sol and teams that did not pick Aurelion Sol. 
+
+**Test Statistic**: The test statistic used is the difference in win rates between teams that picked Aurelion Sol and teams that did NOT pick Aurelion Sol. 
+
+**Significance Level**: 5%
+
+Below is a histogram that displays the distribution of the test statistics during the hypothesis test: 
 <iframe
   src="assets/aurelionsol_hypothesis.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+The hypothesis test concluded a p-value of 0.3791. This is a large p-value that way exceeded the threshold, so we failed to reject the null hypothesis. This result is not surprising, as although Aurelion Sol appears to have a noticeably higher win rate than other champions, his win rate is based on an extremely limited sample size (number of times picked) in the 2022 professional season. Since Aurelion Sol was almost never drafted, not very many games invovled him, which eplains why his observed win rate is highly unstable. A win rate difference as extreme as the observed one occurs frequently just by random chance alone under the null hypothesis. The statistical evidence is insufficient to conclude that picking Aurelion Sol meaningfully increases or decreases a team’s probability of winning.
 
 ## Framing a Prediction Problem
 Will my p-value still be small?
