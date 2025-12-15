@@ -98,7 +98,7 @@ First, I tested whether the missingness of `pick1` depends on `position`.
 
 **Alternative Hypothesis**: The proportion of missing values in pick1 is not the same for team level rows and player level rows.
 
-After performing the permutation test and computing the observed statistic (by computing the absolute difference in missingness rates of pick1 between rows where `position` == `team` and rows where `position` != `team`), I found that the p-value was 0 and the observed statistic was 0.96. The plot below displays the empirical distribution of the TVDs. 
+After performing the permutation test and computing the observed statistic (by computing the absolute difference in missingness rates of pick1 between rows where `position` == `team` and rows where `position` != `team`), I found that the p-value was 0 and the observed statistic was 0.9637656672401083. The plot below displays the empirical distribution of the TVDs. 
 
 <iframe
   src="assets/mar_dependent.html"
@@ -108,8 +108,13 @@ After performing the permutation test and computing the observed statistic (by c
 ></iframe>
 Since the p-value is less than the threshold of 0.5, I reject the null hypothesis. This shows a strong evidence of dependence between the columns. Therefore, the missingness of `pick1` depends on `position`. 
 
-Second, I tested whether the missingness of `pick1` depends on `result`. 
+Second, I tested whether the missingness of `pick1` depends on match outcome, `result`. 
 
+**Null Hypothesis**: The distribution of match outcomes is the same when pick1 is missing and when it is not missing.
+
+**Alternative Hypothesis**: The distribution of match outcomes is not the same when pick1 is missing and when it is not missing.
+
+After performing the permutation test, the resulting p-value was 1 and the observed statistic was 0.0. The plot below displays the empirical distribution of the TVDs. 
 <iframe
   src="assets/mar_independent.html"
   width="800"
