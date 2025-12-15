@@ -1,6 +1,5 @@
 # League of Legends Champion Specific Statistical Analysis
-League of Legends Champion Specific Statistical Analysis is a comprehensive data science project conducted at UCSD for DC80.
-
+League of Legends Champion Specific Statistical Analysis is a comprehensive data science project conducted at UCSD for DC80. This project consists of a multitide of analysis from start to end including data extraction/cleaning, exploratory data analysis, hypothesis testing, outline of a baseline model, finalized model, and fairness analysis. The project's main objective is to investigate further on the significance of the champion selection process and how various factors related to it can influence match statistics such as the match outcome. 
 
 Authors: Angela Wu
 
