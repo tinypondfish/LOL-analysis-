@@ -175,10 +175,10 @@ Our model is fair. Its accuracy for Blue-side teams is the same as its accuracy 
 **Alternative Hypothesis**:
 Our model is unfair. Its accuracy for Red-side teams is lower than its accuracy for Blue-side teams.
 
-**Test Statistic**
+**Test Statistic**:
 The test statistic used is the difference in accuracy between the two groups. This statistic measures whether the model predicts outcomes more accurately for one side compared to the other.
 
-**Results and Conclusion**
+**Results and Conclusion**:
 After performing the permutation test, I concluded a p-value of 0.256, which is greater than the chosen significance level of 0.05. As a result, we fail to reject the null hypothesis.
 
 This test result demonstrates that there is no statistically significant evidence that the model performs worse for Red-side teams compared to Blue-side teams. Based on this, the model appears to be equally predictive in performance across both sides, indicating no notable fairness concerns in relation to side assignment.
