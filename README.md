@@ -90,13 +90,26 @@ So much text.
 Among our columns of interest, bans 1-5 stood out as potential candidates for NMAR(Not Missing At Random) analysis. On the surface, the dataset does not reveal the nature of missingness for bans. There dosen't seem to be any obvious trends or dependencies on other columns. However, with some domain knowledge, one could argue that the missingness of bans 1-5 could be classified as a case of NMAR. At the start of a professional League of Legends game, players can decide to leave a ban slot empty. Rather than reflecting dependency with another column in the dataset (as in the case with MAR), this reflects an intentional decision made by a team. Since the missingness of bans depend on the decision itself, this is a case of NMAR. If an extra column `ban_skipped` was considered during data collection which indicated whether a team left at least one slot empty(indicated by 1) or used all bans(indicated by 0), the ban columns would fall under MAR instead.
 
 ### Missingness Dependency
-Bazinga!
+For the MAR(Missing At Random) analysis, I will be investigating whether the missingness of the `pick1` column has any dependencies on the other columns in the dataset. The two other columns I explored in relation to `pick1` were `position` and `result`. I used the TVD(Total Variation Distance) as my test statistic and a standard significance threshold of 0.5. I defined a binary indicator column, `pick1_missing`, with the value being `True` when `pick1` is missing and `False` otherwise. I then performed a permutation test to determine the missing mechanism. 
+
+First, I tested whether the missingness of `pick1` depends on `position`. 
+
+**Null Hypothesis**: The proportion of missing values in pick1 is the same for team level rows and player level rows.
+
+**Alternative Hypothesis**: The proportion of missing values in pick1 is not the same for team level rows and player level rows.
+
+After performing the permutation test and computing the observed statistic (by computing the absolute difference in missingness rates of pick1 between rows where `position` == `team` and rows where `position` != `team`), I found that the p-value was 0 and the observed statistic was 0.96. The plot below displays the empirical distribution of the TVDs. 
+
 <iframe
   src="assets/mar_dependent.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+Since the p-value is less than the threshold of 0.5, I reject the null hypothesis. This shows a strong evidence of dependence between the columns. Therefore, the missingness of `pick1` depends on `position`. 
+
+Second, I tested whether the missingness of `pick1` depends on `result`. 
+
 <iframe
   src="assets/mar_independent.html"
   width="800"
