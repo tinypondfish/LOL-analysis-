@@ -59,8 +59,8 @@ I performed univariate analysis on champion pick frequencies in the dataset:
   height="600"
   frameborder="0"
 ></iframe>
-The barchart displays the top 10 most picked champions in pro play during the 2022 season. Significant differences in champion pick preference is noticeably present, with the most picked champion picked 3743 times. It is interesting to note that the most preferable champions that are typically picked does not correspond to the champions with the highest win rate. It is also important to note that some champions have been picked significantly less during the season, as seen with Aurelion Sol (picked 5 times). 
 
+The barchart displays the top 10 most picked champions in pro play during the 2022 season. Significant differences in champion pick preference is noticeably present, with the most picked champion picked 3743 times. It is interesting to note that the most preferable champions that are typically picked does not correspond to the champions with the highest win rate. It is also important to note that some champions have been picked significantly less during the season, as seen with Aurelion Sol (picked 5 times). 
 
 Another univariate analysis I performed on match outcomes:
 <iframe
@@ -69,8 +69,8 @@ Another univariate analysis I performed on match outcomes:
   height="600"
   frameborder="0"
 ></iframe>
-This barchart displays the distribution of match outcomes in the dataset, where a value of 1 represents a win and 0 represents a loss. The distribution is exactly balanced, with wins and losses occurring at exactly equal frequencies. This is an expected result, as each game results in exactly one winning team and one losing team. This distribution provides an important foundation/baseline for the analysis since the target variable is not heavily imbalanced. Standard classification metrics such as accuracy are appropriate for evaluating predictive models in later steps.
 
+This barchart displays the distribution of match outcomes in the dataset, where a value of 1 represents a win and 0 represents a loss. The distribution is exactly balanced, with wins and losses occurring at exactly equal frequencies. This is an expected result, as each game results in exactly one winning team and one losing team. This distribution provides an important foundation/baseline for the analysis since the target variable is not heavily imbalanced. Standard classification metrics such as accuracy are appropriate for evaluating predictive models in later steps.
 
 ### Bivariate Analysis
 I performed bivariate analysis on champion picks (picks 1-5) and the result statistic in the dataset. This allows me to analyze the winrate of each champion.
@@ -87,7 +87,8 @@ So much text.
 
 ## Assessment of Missingness
 ### NMAR Analysis
-Wowzers.
+Among our columns of interest, bans 1-5 stood out as potential candidates for NMAR(Not Missing At Random) analysis. On the surface, the dataset does not reveal the nature of missingness for bans. There dosen't seem to be any obvious trends or dependencies on other columns. However, with some domain knowledge, one could argue that the missingness of bans 1-5 could be classified as a case of NMAR. At the start of a professional League of Legends game, players can decide to leave a ban slot empty. Rather than reflecting dependency with another column in the dataset (as in the case with MAR), this reflects an intentional decision made by a team. Since the missingness of bans depend on the decision itself, this is a case of NMAR. If an extra column `ban_skipped` was considered during data collection which indicated whether a team left at least one slot empty(indicated by 1) or used all bans(indicated by 0), the ban columns would fall under MAR instead.
+
 ### Missingness Dependency
 Bazinga!
 <iframe
