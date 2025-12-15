@@ -61,6 +61,7 @@ I performed univariate analysis on champion pick frequencies in the dataset:
 ></iframe>
 The barchart displays the top 10 most picked champions in pro play during the 2022 season. Significant differences in champion pick preference is noticeably present, with the most picked champion picked 3743 times. It is interesting to note that the most preferable champions that are typically picked does not correspond to the champions with the highest win rate. It is also important to note that some champions have been picked significantly less during the season, as seen with Aurelion Sol (picked 5 times). 
 
+
 Another univariate analysis I performed on match outcomes:
 <iframe
   src="assets/match_outcome_univariate.html"
@@ -72,19 +73,14 @@ This barchart displays the distribution of match outcomes in the dataset, where 
 
 
 ### Bivariate Analysis
-
+I performed bivariate analysis on champion picks (picks 1-5) and the result statistic in the dataset. This allows me to analyze the winrate of each champion.
 <iframe
   src="assets/champion_bivariate.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
-<iframe
-  src="assets/winrate_side_bivariate.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+The graph displays the win rates of the top 10 champions with the highest win rates in the dataet. I choose to focus on this subset to narrow down the focus and highlight whether the most popular draft choices coincides with match success. Though there seem to be a notable difference in winrates between champions, an important thing to note is that some champions, such as Aurelion Sol, only appeared a total of < 10 total times. This makes their observed win rates less reliable due to the limitations of insufficient sample size. Another thing to point out is that many champions still perform within a relative range, suggesting that champion win rate is not the sole factor in determining match success. Futher analysis is necessary to discern other factors that are at play such as team composition. 
 
 ### Interesing Aggregates
 So much text.
