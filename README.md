@@ -56,7 +56,7 @@ I performed univariate analysis on champion pick frequencies in the dataset:
 <iframe
   src="assets/champion_pick_univariate.html"
   width="800"
-  height="200"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -66,7 +66,7 @@ Another univariate analysis I performed on match outcomes:
 <iframe
   src="assets/match_outcome_univariate.html"
   width="800"
-  height="200"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -77,7 +77,7 @@ I performed bivariate analysis on champion picks (picks 1-5) and the result stat
 <iframe
   src="assets/champion_bivariate.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 The graph displays the win rates of the top 10 champions with the highest win rates in the dataet. I choose to focus on this subset to narrow down the focus and highlight whether the most popular draft choices coincides with match success. Though there seem to be a notable difference in winrates between champions, an important thing to note is that some champions, such as Aurelion Sol, only appeared a total of < 10 total times. This makes their observed win rates less reliable due to the limitations of insufficient sample size. Another thing to point out is that many champions still perform within a relative range, suggesting that champion win rate is not the sole factor in determining match success. Futher analysis is necessary to discern other factors that are at play such as team composition. 
@@ -103,7 +103,7 @@ After performing the permutation test and computing the observed statistic (by c
 <iframe
   src="assets/mar_dependent.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 Since the p-value is less than the threshold of 0.5, I reject the null hypothesis. This shows a strong evidence of dependence between the columns. Therefore, the missingness of `pick1` depends on `position`. 
@@ -118,7 +118,7 @@ After performing the permutation test, the resulting p-value was 1 and the obser
 <iframe
   src="assets/mar_independent.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 Since the p-value is greater than the threshold of 0.5, I failed to reject the null hypothesis. Therefore, the missingness of `pick1` does not depend on `result`. 
@@ -138,7 +138,7 @@ Below is a histogram that displays the distribution of the test statistics durin
 <iframe
   src="assets/aurelionsol_hypothesis.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 The hypothesis test concluded a p-value of 0.3791. This is a large p-value that way exceeded the threshold, so we failed to reject the null hypothesis. This result is not surprising, as although Aurelion Sol appears to have a noticeably higher win rate than other champions, his win rate is based on an extremely limited sample size (number of times picked) in the 2022 professional season. Since Aurelion Sol was almost never drafted, not very many games invovled him, which eplains why his observed win rate is highly unstable. A win rate difference as extreme as the observed one occurs frequently just by random chance alone under the null hypothesis. The statistical evidence is insufficient to conclude that picking Aurelion Sol meaningfully increases or decreases a team’s probability of winning.
@@ -159,4 +159,25 @@ P-value is small.
 P-value will always be small.
 
 ## Fairness Analysis
-Unfair.
+Clearly state your choice of Group X and Group Y, your evaluation metric, your null and alternative hypotheses, your choice of test statistic and significance level, the resulting 
+-value, and your conclusion.
+In this section, I will assess whether my final prediction model performs fairly across different groups. Specifically, I aim to answer the following question: Does the model perform worse for teams playing on the Red side compared to teams playing on the Blue side of the arena? Side assignment is a meaningful grouping in professional League of Legends play, as Blue and Red sides can have structural differences that may influence gameplay and the resulting outcome.
+
+To answer this question, I conducted a permutation test examining the difference in accuracy between the two groups.
+
+Group X represents teams playing on the Blue side, while Group Y represents teams playing on the Red side. My chosen evaluation metric is accuracy. The significance threshold for this test is 5%.
+
+
+**Null Hypothesis**:
+Our model is fair. Its accuracy for Blue-side teams is the same as its accuracy for Red-side teams, and any observed difference is due to random chance.
+
+**Alternative Hypothesis**:
+Our model is unfair. Its accuracy for Red-side teams is lower than its accuracy for Blue-side teams.
+
+**Test Statistic**
+The test statistic used is the difference in accuracy between the two groups. This statistic measures whether the model predicts outcomes more accurately for one side compared to the other.
+
+**Results and Conclusion**
+After performing the permutation test, I concluded a p-value of 0.256, which is greater than the chosen significance level of 0.05. As a result, we fail to reject the null hypothesis.
+
+This test result demonstrates that there is no statistically significant evidence that the model performs worse for Red-side teams compared to Blue-side teams. Based on this, the model appears to be equally predictive in performance across both sides, indicating no notable fairness concerns in relation to side assignment.
