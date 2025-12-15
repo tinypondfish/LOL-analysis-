@@ -8,9 +8,6 @@ Authors: Angela Wu
 Text
 ### Introduction of Columns
 This dataset contains an array of columns containing a multitude of game data from various professional League of Legends matches. With over 30 columns of different game data, the following is an introduction of some of the key columns used in this statistical analysis:
-| Column | Description |
-|---|---|
-| 'deaths' | Number of deaths in a game |
 
 - `gameid`: This column represents the unique identifier for each match/game that is played, which lets us distinguish between different matches.
   
