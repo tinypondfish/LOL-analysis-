@@ -121,7 +121,7 @@ After performing the permutation test, the resulting p-value was 1 and the obser
   height="600"
   frameborder="0"
 ></iframe>
-
+Since the p-value is greater than the threshold of 0.5, I failed to reject the null hypothesis. Therefore, the missingness of `pick1` does not depend on `result`. 
 
 ## Hypothesis Testing
 My p-value is so small.
